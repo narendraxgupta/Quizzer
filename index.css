@@ -1,0 +1,105 @@
+/* Global styles and topic backgrounds */
+
+html, body, #root { height: 100%; }
+
+/* Topic backgrounds (plain CSS gradients) */
+.bg-topic-wellness { background: linear-gradient(135deg, #A8E6CF 0%, #DCEDC2 100%); }
+.bg-topic-tech-trends { background: linear-gradient(135deg, #D6E1FF 0%, #B8C6FF 100%); }
+.bg-topic-world-history { background: linear-gradient(135deg, #FFE1A8 0%, #FFD5B5 100%); }
+.bg-topic-space-exploration { background: linear-gradient(135deg, #C9F0FF 0%, #B5D8FF 100%); }
+.bg-topic-ocean-life { background: linear-gradient(135deg, #A8E0FF 0%, #BFE9FF 100%); }
+.bg-topic-modern-art { background: linear-gradient(135deg, #FFD1F3 0%, #FCE1FF 100%); }
+
+/* Default page background when no topic selected */
+.bg-default-page { background: linear-gradient(135deg, #0F172A 0%, #111827 100%); }
+
+/* Print-friendly adjustments */
+@media print { .no-print { display: none !important; } }
+
+/* Minor card styling for light backgrounds */
+.card-on-light { background: rgba(255,255,255,0.95); color: #111827; }
+.card-on-dark { background: rgba(17,24,39,0.95); color: #f8fafc; }
+
+/* Make gradient text pop */
+.gradient-title { background: linear-gradient(90deg, #7C3AED, #06B6D4); -webkit-background-clip: text; background-clip: text; color: transparent; }
+/* Global styles, themes, and utilities */
+
+:root {
+	--bg: #0f172a;
+	--surface: #0b1220;
+	--text: #ffffff;
+	--muted: #9ca3af;
+	--accent: #6366f1; /* indigo-500 */
+	--accent-2: #a78bfa;
+	--success: #10b981;
+	--danger: #ef4444;
+}
+
+.theme-light {
+	--bg: #ffffff;
+	--surface: #ffffff;
+	--text: #0f172a;
+	--muted: #6b7280;
+	--accent: #4f46e5;
+	--success: #059669;
+	--danger: #dc2626;
+}
+
+html, body, #root { height: 100%; margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+body { background: var(--bg); color: var(--text); }
+
+/* Topic backgrounds (plain CSS gradients) */
+.bg-topic-wellness { background: linear-gradient(135deg, #A8E6CF 0%, #DCEDC2 100%); }
+.bg-topic-tech-trends { background: linear-gradient(135deg, #D6E1FF 0%, #B8C6FF 100%); }
+.bg-topic-world-history { background: linear-gradient(135deg, #FFE1A8 0%, #FFD5B5 100%); }
+.bg-topic-space-exploration { background: linear-gradient(135deg, #C9F0FF 0%, #B5D8FF 100%); }
+.bg-topic-ocean-life { background: linear-gradient(135deg, #A8E0FF 0%, #BFE9FF 100%); }
+.bg-topic-modern-art { background: linear-gradient(135deg, #FFD1F3 0%, #FCE1FF 100%); }
+
+/* Default page background when no topic selected */
+.bg-default-page { background: linear-gradient(135deg, #0F172A 0%, #111827 100%); }
+
+/* Buttons: accessible focus, subtle transitions */
+button {
+	cursor: pointer;
+	transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+}
+button:active { transform: translateY(1px); }
+button:focus { outline: none; }
+button:focus-visible { box-shadow: 0 0 0 3px rgba(99,102,241,0.18); border-radius: 6px; }
+
+/* Utility button styles (for non-Tailwind elements) */
+.btn-primary { background: var(--accent); color: white; padding: .5rem .75rem; border-radius: .375rem; }
+.btn-secondary { background: rgba(255,255,255,0.06); color: var(--text); padding: .45rem .7rem; border-radius: .375rem; }
+
+/* Card helpers */
+.card-on-light { background: rgba(255,255,255,0.95); color: #111827; }
+.card-on-dark { background: rgba(17,24,39,0.95); color: #f8fafc; }
+
+/* Timer and progress visuals */
+.timer { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace; font-weight: 600; letter-spacing: .02em; }
+.time-bar { height: 6px; border-radius: 999px; overflow: hidden; background: rgba(255,255,255,0.06); }
+.time-bar > .time-fill { height: 100%; background: var(--accent); transition: width 0.3s linear; }
+
+/* Make gradient text pop (utility) */
+.gradient-title { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Print-friendly adjustments */
+@media print {
+	.no-print { display: none !important; }
+	body { background: #fff !important; color: #000 !important; }
+	.bg-default-page, .bg-topic-wellness, .bg-topic-tech-trends, .bg-topic-world-history, .bg-topic-space-exploration, .bg-topic-ocean-life, .bg-topic-modern-art { background: transparent !important; }
+	.card-on-dark, .card-on-light { box-shadow: none !important; background: transparent !important; }
+}
+
+/* Accessibility helpers */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Minor form improvements */
+input, textarea, select { border-radius: .375rem; border: 1px solid rgba(255,255,255,0.06); padding: .5rem .6rem; background: transparent; color: inherit; }
+input::placeholder { color: rgba(255,255,255,0.4); }
+
+/* Small responsive tweaks */
+@media (max-width: 640px) {
+	.max-w-2xl { padding: 1rem; }
+}
