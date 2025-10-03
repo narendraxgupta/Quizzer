@@ -6,9 +6,7 @@
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
-
-# AI-Assisted Knowledge Quiz
+# Quizzer
 
 A small React + TypeScript quiz app that generates multiple-choice questions using an AI service (Gemini) with a safe local mock fallback for offline or free development.
 
